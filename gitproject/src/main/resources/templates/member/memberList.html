@@ -6,6 +6,20 @@
 </head>
 <body>
 	<h2 th:text="${title}"></h2>
-	교육원 작업완료
+	
+	<table border="1">
+		<thead>
+			<tr>
+				<th>회원아이디</th>
+				<th>회원이메일</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="l : ${memberList}">
+				<td th:text="${l.memberId}"></td>
+				<td th:text="${l.memberEmail}"></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
